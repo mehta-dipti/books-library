@@ -1,13 +1,100 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #273244;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.left-section {
+  flex: 2;
+}
+
+.right-section {
+  flex: 1;
+  background-color: white;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.searchBar {
+  margin: 20px;
+  position: sticky;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+  position: fixed;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h2 {
+  color: #273244;
+}
+
+.MuiSvgIcon-root {
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.sort-books {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+}
+
+.filter-books {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-data-wrapper {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MuiFormControl-root .MuiFilledInput-root {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.MuiFormControl-root .MuiFilledInput-root.Mui-Focused {
+  background-color: #fff;
+  opacity: 1;
 }
