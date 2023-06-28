@@ -41,6 +41,7 @@ const Dashboard = () => {
       dispatch(setPages(books.pagination));
     };
     getBooks();
+    //eslint-disable-next-line
   }, [pages.currentPage, pages.sortDirection, filters]);
 
   const handleOnSearch = (e) => {
