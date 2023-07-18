@@ -12,8 +12,8 @@ const SearchBar = ({ handleOnSearch }) => {
   const [openDialog, setOpenDialog] = useState(false);
 
   return (
-    <div className="searchBar">
-      <Paper component="form" sx={{ p: "2px 4px", display: "flex", alignItems: "center", width: 400 }}>
+    <div className="search-container">
+      <Paper component="form" sx={{ p: "2px 4px", display: "flex", alignItems: "center", width: 400 }} className="search-bar">
         <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Search books by title " onChange={handleOnSearch} />
         <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
           <SearchIcon />

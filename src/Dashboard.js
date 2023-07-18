@@ -10,13 +10,26 @@ import Pagination from "./Pagination";
 import EditIcon from "@mui/icons-material/Edit";
 import AddBook from "./AddBook";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles({
   booksListContainer: {
     width: "200px",
     padding: "10px",
     margin: "20px",
+    backgroundColor: "red",
   },
-}));
+  cardContainer: {
+    "& .MuiPaper-root": {
+      color: "#fff ",
+      backgroundColor: "#00800045",
+      backdropFilter: "saturate(180%) blur(10px) ",
+    },
+  },
+  searchBox: {
+    "& .MuiPaper-root": {
+      backgroundColor: "#00800045",
+    },
+  },
+});
 
 const Dashboard = () => {
   const classes = useStyles();
@@ -71,7 +84,7 @@ const Dashboard = () => {
       <div className="dashboard">
         <div className="left-section">
           <SearchBar handleOnSearch={handleOnSearch} />
-          <div className="cards-container">
+          <div className={`cards-container ${classes.cardContainer}`}>
             {(searchResult ? searchResult : bookList)?.map((book) => (
               <Paper elevation={4} className={classes.booksListContainer}>
                 <h3>{book.title}</h3>
